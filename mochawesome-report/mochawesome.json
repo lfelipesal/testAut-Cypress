@@ -1,0 +1,100 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-10-30T03:27:06.608Z",
+    "end": "2022-10-30T03:28:55.221Z",
+    "duration": 108613,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3ad51350-9f04-4443-8bbd-430c61953dd5",
+      "title": "",
+      "fullFile": "cypress\\e2e\\araujo.cy.js",
+      "file": "cypress\\e2e\\araujo.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f2052d0e-9cb5-41ba-ae6d-a4d56f3d3316",
+          "title": "Teste de selecionar um item no site da araujo sem finalizar compra",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Teste de pedido sem confirmar dados",
+              "fullTitle": "Teste de selecionar um item no site da araujo sem finalizar compra Teste de pedido sem confirmar dados",
+              "timedOut": null,
+              "duration": 103117,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Procuro o Botão para fechar o modal e clico\ncy.get('div > .fa').click(); //procurando por um item e apertar ENTER\nvar item = 'miojo';\ncy.contains('.header__search.header-searchbar', 'Buscar').type(item + '{enter}'); //Selecionando o primeiro item para comprar\n//Depois da pesquisa pego o primeiro item do resultado\ncy.get(':nth-child(1) > :nth-child(1) > .item').click(); // Clico para comprar e assim adiciona esse item no meu carrinho\ncy.contains('a', 'Comprar').click(); //Finalizando pedido sem confirma os dados\n// Espero o modal do carrinho aparecer\ncy.wait(5000); // Iniciando a finalização da compra\ncy.contains('a', 'Finalizar Compra').click(); // Confirmando o fechamento da compra\ncy.get('.CROModal__btn-finalizar').click(); // Fechando o pedido de compra\ncy.contains('a', 'Fechar pedido').click();",
+              "err": {},
+              "uuid": "4b3be613-9292-4cb3-8ef2-607b3bb291fe",
+              "parentUUID": "f2052d0e-9cb5-41ba-ae6d-a4d56f3d3316",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4b3be613-9292-4cb3-8ef2-607b3bb291fe"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 103117,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
