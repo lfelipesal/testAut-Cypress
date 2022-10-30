@@ -1,5 +1,6 @@
+![cypress](https://user-images.githubusercontent.com/93229568/198861552-f82a922c-8e8b-4463-a779-03618b68e63d.png)
 
-# ![cypress](https://user-images.githubusercontent.com/93229568/198861552-f82a922c-8e8b-4463-a779-03618b68e63d.png) Teste Automatizado
+#  Teste Automatizado de interface
 
 Fui desafiado para criar um caso de teste automatizado no site da [Araujo](https://www.araujo.com.br/), foi pedido para efetuar um pedido de compra,
 mas sem finalizar a venda. Para isso foi realizado todo o fluxo de pedido, seja ele entrando no site, fechando as abas iniciais, 
